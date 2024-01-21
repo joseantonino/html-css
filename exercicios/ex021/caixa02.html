@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Grouping Tags</title>
+
+        <style>
+            body  {
+                font-family: Arial, Helvetica, sans-serif; /*para mudar o tipo de letra do body*/
+                background-color: dimgray; /*para colocar cor no fundo do body*/
+                margin: 0px;/*para colocar a margen do body no rodapé*/  
+            }
+
+            header  {
+                background-color: white; /*para colocar cor no fundo do cabeçalho*/
+                padding: 10px; /*para colocar a cor branca no preenchimento do cabeçalho*/
+                margin: 10px; /*para colocar uma margem rodeando o cabeçalho*/
+
+            }
+
+            h1  {
+                background-color: rgba(182, 88, 88, 0.397);
+                margin: 1px black;
+                color: rgb(50, 51, 65);
+            }
+
+            h1  {
+                box-shadow: inset 2px 1px 14px 6px rgba(0, 0, 0, 0.5);  /*para colocar sombra no lado de dentro da caixa*/             
+            }
+
+            nav  {
+                background-color: rgb(102, 102, 102);/*para colocar uma taja no navegador(link)*/ 
+                padding: 3px;/*para aumentar a largura da taja do navegador(link)*/
+                box-shadow: 1px 1px 1px #b41b1b88;
+            }
+
+            nav  > a  {
+                text-decoration: none;/*para tirar o sublinhado do navedador(link)*/ 
+                color: white;/*para colocar a cor branca na fonte do navegador(link)*/
+                font-weight: bold;/*para aumentar a espesura da fonte do navegador(link)*/ 
+                margin-right: 30px;/*para aumentar a distância entre os navegadores(link)*/ 
+            }
+
+            nav  >  a:hover  {
+                text-decoration: underline;/*para colocar um traço no navegador(link), 
+                                             quamdo passar o mause em cima*/
+                color: rgb(197, 177, 61);/*para colocar cor amarelo quando passar o mause
+                                            em cima do navegador (link).*/
+            }                                 
+            
+            main  {
+                background-color: white;/*para colocar o fundo do main(principal)branco.*/
+                padding: 10px;/*para colocar uma preenchimento de cor cinza em torno do background-color.*/ 
+                box-shadow: 1px 1px  black;/*para colocar borda de cor preta no main(principal).*/
+                margin: 10px;/*para colocar uma margen na lateral do maim(principal).*/  
+                border-radius: 10px 0px 10px 0px;/*para arredondar as quinas das paginas.*/                  
+            }
+
+            section > p {
+                color: blue;/*para colocar uma cor azul na seção no 
+                                paragrafo dentro do main principal.*/
+                text-align: center;/*para centralizar o paragrafo que esta 
+                                     dentro do main (principal).*/ 
+            }
+
+            article   {
+                background-color: lightgray;/*para colocar a cor cinza no fundo do artigo*/
+                padding: 5px;/*para almentar o preenchimento da cor cinza do artigo*/ 
+            }
+
+            article > aside   {
+                background-color: rgb(165, 165, 165);/*para colocar a cor no rodapé do artigo*/
+                color: rgb(184, 32, 27);/*para colocar uma cor vermelha no aside(parte)dentro do  main (pricipal).*/ 
+            }                                
+
+            footer   {
+                background-color: black; /*para colocar a cor preta no rodapé*/
+                color: white;/*para colocar a cor branca na letra do rodapé*/
+                text-align: center;/*para centralizar o conteúdo do rodapé*/
+                padding: 1px;/*para colocar a largura do rodpé*/
+                margin: 0px;/*para colocar a margem no rodapé*/
+            }
+
+            footer > p  {
+                margin: 0px;/*para colocar margem zero na taja preta do footer(rodapé).*/ 
+            }
+
+            div#bola  {
+                height: 100px;/*para colocar altura na bola.*/
+                width: 100px;/*para colocar largura na bola.*/
+                background-color: white;/*para colocar cor na bola.*/
+                margin: 10px;/*para colocar margin na lateral da bola.*/
+                border-radius: 50%;/*para formar a bola.*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Meu site.</h1>
+            <nav>
+               <a href="#">Link.</a>
+               <a href="#">Link.</a>
+               <a href="#">Link.</a>
+               <a href="#">Link.</a>
+               <a href="#">Link.</a>
+            </nav>
+        </header>
+        <main>
+            <section id="assuntos">
+                <p>Esportes Política Tecnologia</p>
+            </section>
+            <section id="noticias">
+                <article>
+                    
+                    <h2>Notícias sobre o Brasil.</h2>
+                    
+                    <p>Lorem, ipsum dolor sit amet consectetur <br>adipisicing
+                    elit. Possimus reprehenderit iure dignissimos <br>corporis 
+                    laboriosam quaerat, quam quasi, molestias <br>libero cumque, 
+                    eum autem. Accusamus, soluta aliquam <br>dignissimosbr
+                    vel nemo a esse?</p>
+                    
+
+                    <aside>
+                        <p>Artigo escrito por josé da silva.</p>
+                    </aside>
+                </article>
+                <article>
+
+                </article>
+            </section>
+        </main> 
+        <footer>
+            <p>Desenvolvido pelo CursoemVideo.</p>
+        </footer>
+        <div id="bola"></div>   
+    </body>
+</html>
