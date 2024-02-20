@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Teste de Imagem de Fundo</title> 
+
+        <style> /*para colocar os estilos nas fuguras*/
+
+         body  {
+            background-image: url('imagens/wallpaper001.jpg'); /*para colocar imagen no fundo da tela grande*/
+            
+         } 
+
+         div.quadrado  { /*para fazer as configurações nos quadrados*/ 
+            display: inline-block; 
+            border: 2px solid black; /*para colocar bordas com espessura e com cor preta*/
+            border-radius: 10px; /*para colocar o tamanho dos raios das bordas*/
+            background-color: lightgray; /*para colocar cor cinza nos três quadrados*/
+            width: 150px; /*para colocar largura nos três quadrados*/
+            height: 150px; /*para colocar altura nos três quadrados*/
+         }
+
+         div#q1  { /*para fazer as configurações individual no quadrado 1 */
+              background-color: skyblue; /*para colocar a cor azul no primeiro quadrado*/
+         }
+
+         div#q2  { /*para fazer as configurações individual no quadrado 2 */
+              background-image: linear-gradient(to bottom, yellow, red); /*para colocar cor gradiente no quadrado 3 */
+         }
+
+         div#q3  { /*para fazer as configurações individual no quadrado 3 */ 
+              background-image: url('imagens/pattern003.png'); /*para colocar uma imagem no quadrado 3 */
+         }
+        
+        </style>
+    </head>
+    <body>
+        <div class="quadrado" id="q1">     
+         
+        </div>
+
+        <div class="quadrado" id="q2"> 
+
+        </div>
+
+        <div class="quadrado" id="q3"> 
+
+        </div>
+    
+    </body>
+</html>
