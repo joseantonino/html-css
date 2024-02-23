@@ -3,21 +3,34 @@
     <head>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Document</title>
+       <title>Fundo Fixo de Tela.</title>
         
         <style>
             body  {
                 height: 100vh; /*para colocar a imagem ocupando 100% da tela*/
-                background-color: black; /*para colocar o fundo preto*/
-                background-image: url('imagens/wallpaper002.jpg'); /*para colocar a imagem na tela*/
-                background-position: center top; /*para o main ficar sempre no maio da imagem do fundo*/
-                background-repeat: no-repeat; /*para não repetir a imagem do fundo*/
-                background-size: cover; /*para colocar a imagem de fundo acupando 100% da tela, pode usar também: 100%, 100% 100%,auto,contain,*/ 
+                /*background-color: black; /*para colocar o fundo preto*/
+                /*background-image: url('imagens/wallpaper002.jpg'); /*para colocar a imagem na tela*/
+                /*background-position: center center; /*para o main ficar sempre no maio da imagem do fundo*/
+                /*background-repeat: no-repeat; /*para não repetir a imagem do fundo*/
+                /*background-size: cover; /*para colocar a imagem de fundo acupando 100% da tela, pode usar também: 100%, 100% 100%,auto,contain,*/ 
+                /*background-attachment: scroll; /*para a imagem de fundo rolar junto com o main(principal)*/ 
+                /*background-attachment: fixed; /*para o main(principal)rolar e a imagem de fundo ficar fixa*/
+
+                /*shorthand=(forma abreviada) - backgraund obs:tem o mesmo resultado do código acima
+                   color => image => position => repeat => [size] => attachment*/ 
+            
+                background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+                background-size: cover;
+            }
+            
+            h1   {
+                font-size: 19px;
+                font-family: Arial, Helvetica, sans-serif;
             }
 
             main  {
                 background-color: white; /*para colocar cor branca no main(principal)*/
-                width: 375px; /*para colocar o tamanho do main(principal)*/
+                max-width: 250px; /*para colocar o tamanho do main(principal)*/                    
                 padding: 10px; /*para colocar uma margem ao redor do main(principal)*/ 
                 margin: auto; /*para centralizar o main(principal), no centro da imagem de fundo*/ 
                 border: 1px solid red; /*para colocar uma bordar em volta do main(principal), na cor vermelha*/
@@ -31,26 +44,44 @@
         <main>
 
            <h1>Teste de Imagem de Fundo.</h1>  
-           <p>Lorem ipsum dolor sit amet, 
-           consectetur adipisicing elit. 
-           Mollitia placeat expedita aperiam 
-           laborum natus autem! Dolorum at nihil 
-           odit repudiandae qui inventore, quas 
-           nemo, officia, dolorem aliquam atque 
-           vel eligendi? Lorem ipsum dolor sit 
-           amet consectetur adipisicing elit. 
-           Vitae porro unde architecto nihil, 
-           adipisci, minima et velit placeat 
-           dolore eveniet at inventore molestias 
-           necessitatibus fuga reprehenderit! 
-           Expedita natus nulla deleniti? Lorem 
-           ipsum dolor, sit amet consectetur 
+           <p>Lorem ipsum dolor sit amet,
+           consectetur adipisicing elit.
+           Mollitia placeat expedita aperiam
+           laborum natus autem! Dolorum at nihil
+           odit repudiandae qui inventore, quas
+           nemo, officia, dolorem aliquam atque
+           vel eligendi?</p> 
+           <p>Lorem ipsum dolor sit
+           amet consectetur adipisicing elit.
+           Vitae porro unde architecto nihil,
+           adipisci, minima et velit placeat
+           dolore eveniet at inventore molestias
+           necessitatibus fuga reprehenderit!
+           Expedita natus nulla deleniti?</p> 
+           <p>Lorem ipsum dolor, sit amet consectetur 
            adipisicing elit. Corporis aliquid 
            distinctio hic quam, sequi perspiciatis 
            ducimus necessitatibus natus, ipsam ipsa 
            officia expedita. Quo sequi laudantium 
-           vel id exercitationem, assumenda tenetur.</p>
-       
+           vel id exercitationem, assumenda tenetur.</p> 
+           <p>Lorem ipsum dolor sit amet consectetur 
+           adipisicing elit. Possimus assumenda sequi 
+           aliquam magnam ea nobis iste earum asperiores
+           quis! Exercitationem ipsum ipsam animi 
+           assumenda nesciunt rerum accusantium aliquam
+           ducimus quam?</p>
+           <p>Lorem ipsum dolor sit amet, consectetur 
+           adipisicing elit. Dicta unde voluptates 
+           nesciunt assumenda ducimus? Dolorum ex ad, 
+           explicabo amet iure, molestias vel tempora 
+           cupiditate quos expedita quod illum? Harum, 
+           expedita.</p>
+           <p>Lorem ipsum dolor sit amet consectetur 
+           adipisicing elit. Omnis maiores porro, 
+           quisquam, ab iusto doloremque nam magnam 
+           deserunt fuga excepturi dolorum aspernatur 
+           accusamus eligendi ad eius distinctio veniam 
+           corporis repellendus.</p>
         </main> 
     </body>
 </html>
