@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>desafio 014.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>desafio 014.</title>
 
-         <style>
+        <style>
             
             body   {
                 font-family: Arial, Helvetica, sans-serif;
@@ -14,6 +14,7 @@
             
             table  {
                 border-collapse: collapse;
+                width: 600PX;
             }
 
             caption  {
@@ -26,6 +27,7 @@
                 border: 1px solid gray;
                 padding: 10px;
                 text-align: center;
+                font-weight: bold;
                 
             }
 
@@ -34,16 +36,19 @@
                 background-color: rgba(0, 0, 0, 0.308);
                 color:   white;    
             }
+
+            .MEC   {
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.308);
+                color: white;
+            }
             
             .MET  {
                 background-color: rgba(0, 0, 0, 0.308);
                 color: white;
             }
-            
-
-            
-
-         </style>
+        
+        </style>
     </head>
     <body>
         <h1>Desafio Tabela.</h1>
@@ -56,26 +61,26 @@
             <thead>
 
                 <tr>
-                   <th>A</th>
-                   <th>B</th>
-                   <th colspan="2">Notas</th>
+                   <th scope="col">A</th>
+                   <th rowspan="2" class="MET" scope="col">Disciplina</th>
+                   <th colspan="2" scope="colgroup" class="MEC">Notas</th>
                    <!--<td>D</td> -->
-                   <th rowspan="2">Média</th>
+                   <th rowspan="2" class="MEC">Média</th>
                 </tr>
                
                 <tr>
                     <!--<th>Notas</th> -->           
-                    <th>Área</th>
-                    <th>Disciplinas</th>
-                    <th>Nota 1</th>
-                    <th>Nota 2</th>
+                    <th class="MEC">Área</th>
+                    <!--<th class="MEC">C</th> -->
+                    <th class="MEC">Nota 1</th>
+                    <th class="MEC">Nota 2</th>
                     <!--<th>Média</th> -->                    
                 </tr>
             </thead>
                 
                 <tbody>
                     <tr>
-                        <th rowspan="3">Exatas</th>
+                        <th rowspan="4">Exatas</th>
                         <td>Matemática</td>
                         <td>0.0</td>
                         <td>0.0</td>
@@ -95,6 +100,13 @@
                        <td>0.0</td>
                        <td>0.0</td>
                     </tr>
+                    
+                    <tr>
+                        <td>Biologia</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>                    
 
                     <tr>
 
@@ -123,18 +135,9 @@
                     <tr>
                         <td colspan="4" class="ME">Média de Humanas</td>
                         <td class="MET">0.0</td>
-                    </tr>
-
-                   
-
+                    </tr>                    
                     
                 </tbody>
-                
-
-                
-            
-
-
         </table>
     </body>
-</html>
+</html>            
