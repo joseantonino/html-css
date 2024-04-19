@@ -12,7 +12,7 @@ html  {
     font-size: 1em;
 }
 
-header   {
+header   {    
     background-color: lightgrey;
 }
 
@@ -32,7 +32,7 @@ menu  li   {
     padding: 10px;
 }
 
-article  {
+article  {   
     width: 800px;
     display: block;
     margin: auto;
