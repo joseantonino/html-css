@@ -40,9 +40,7 @@ Grandes telas: acima de 1200px */
     img#tablet { display: none;}
     img#print { display: block;}
     img#pc { display: none;}
-    img#tv  { display: none;} 
-
-    
+    img#tv  { display: none;}   
     
 }
 
