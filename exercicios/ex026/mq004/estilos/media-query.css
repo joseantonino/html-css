@@ -20,14 +20,15 @@ Grandes telas: acima de 1200px */
     }
 
     main   {
-        width: 90vw;
-        
+        width: 73vw;
+        border: 2px solid black;               
     }
    
     main::after   {
         font-family: Arial, Helvetica, sans-serif;
-        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
-                      
+        font-weight: bold;
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';        
+        text-decoration: overline;             
     } 
     
     main h1   {
