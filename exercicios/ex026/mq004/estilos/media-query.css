@@ -19,6 +19,17 @@ Grandes telas: acima de 1200px */
         background-image: url(../imagens/back-print.jpg); /*desnecessário*/        
     }
 
+    main   {
+        width: 90vw;
+        
+    }
+   
+    main::after   {
+        font-family: Arial, Helvetica, sans-serif;
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+                      
+    } 
+    
     main h1   {
         text-shadow: none;
         color: black;
@@ -30,9 +41,7 @@ Grandes telas: acima de 1200px */
     img#pc { display: none;}
     img#tv  { display: none;} 
 
-    main   {
-        border: 2px solid black;
-    }
+    
     
 }
 
