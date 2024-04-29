@@ -6,10 +6,9 @@
     padding: 0px;
 }
 
-
-
 body, html  {
     background-color: rgb(240, 232, 232);
+    
 }
 
 header   {
@@ -58,7 +57,7 @@ menu > ul > li > a:hover   {
 }
 
 main   {
-    width: 90vw;
+    width: 90vw;    
     background-color: white;
     margin: auto;
     margin-top: 10px;
