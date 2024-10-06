@@ -1,0 +1,264 @@
+*   {  /*seletor universal para efetuar mudanças na página do body*/
+    
+    margin: 0; /*código para anular todas as margens que o navegador colocar por padrão*/
+    padding: 0; /*código para anular todas os preenchimentos, margem que o navegador colocar por padrão*/
+    box-sizing: border-box; /*código para permitir a colocação do tamanho da borda*/
+}
+
+:root   {   /*seletor para efetuar mudanças em toda página(fundo), do body(corpo).*/
+    
+   --text-color: rgb(95, 158, 160); /*código para os textos ficarem  todos na cor branco*/
+   --bg-url: url(./imagem/bg-mobile.jpg);   /*código para quando clicar em switch lua, o fundo da caixa do projeto ficar com a cor roxo gradiente(corpo).*/
+   --stroke-color: rgba(255, 255, 255, 0.5);
+   --surface-color: rgba(255, 255, 255, 0.05);
+   --surface-color-hover: rgba(0, 0, 0, 0.02);
+   --highlight-color: rgba(255, 255, 255, 0.2);  
+   --switch-bg-url: url(./imagem/MoonStars.svg); /*código para colocar a imagem da (lua), no switch*/   
+}
+
+.light   { /*seletor para efetuar alterações nas cores dos textos (lua e sol)*/    
+
+    --text-color: rgb(95, 158, 160); /*código para quando clicar em sol os textos ficarem de cor preto.*/
+    --bg-url: url(./imagem/bg-mobile-light.jpg); /*código para colocar a imagem com o fundo da caixa do projeto branco gradiente switch sol,.*/ 
+    --stroke-color: rgba(0, 0, 0, 0.5); /*código para colocar a cor presta na borda da caixa stroke do sol.*/
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --highlight-color: rgba(0, 0, 0, 0.1);     
+    --switch-bg-url: url(./imagem/Sun.svg); /*código para colocar a imagem do sol no switch*/ 
+}
+
+
+body   {  /*seletor efetuar alterações na imagem do fundo da página do body*/
+   
+   height: 100vh; /*código para a imagem de fundo do body acupara todo o tamanho da tela do fundo*/  
+   padding-top: 15px; /*código para colocar espaço no topo*/
+   background: var(--bg-url); /*código para colocar imagem na págima, no fundo do body(corpo). transportado do :root(geral) */  
+   background-repeat: no-repeat; /*código para não repetir a imagem do fundo do body(corpo)*/
+   background-position:  top center; /*código para centralizar a imagem do body(corpo), apartir do topo(parte de cima).*/
+   background-size: cover; /*código para aumentar a imagem cobrindo toda a parte de fundo da página*/   
+
+          /*ou usando o (shorthands) ou (atalho), conforme abaixo:*/
+
+          /*background: color image repeat position/size
+
+          exemplo: background: url(./imagem/bg-mobile-light.jpg) no-repeat top center/cover;*/
+}
+
+
+body *   { /*seletor universal, para efetuar alterações em tudo que esta dentro da caixa geral(cotainer)*/   
+    
+    font-family: 'Inter', sans-serif; /*código para efetuar alterações no tipo da fonte*/
+    color: var(--text-color); /*código para colocar todos os textos na cor branco*/  
+}
+
+#container   { /*seletor para efetuar alterações na caixa de dentro da caixa do body*/
+    
+    width: 100%; /*código para colocar a largura da caixa geral do projeto de 100% da caixa geral do body.*/
+    max-width: 290px; /*código para colocar uma largura maxima no conteiner do projeto*/
+    height: 510px; /*código para colocar a altura da caixa geral do projeto.*/   
+    /*border: 1px solid rgba(255, 187, 0, 0.842); /*código para colocar uma borda de cor amarela na caixa geral do projeto.*/    
+    margin: auto; /*código para centralizar a caixa geral do projeto na pagina.*/
+    padding-top: 56px auto 0px; /*(cima,direita,embaixo,esquerda)código para dar uma margem no topo entre a página e a caixa geral do projeto.*/  
+    padding: 0 15px; /*código para colocar um espaço entre a caixa dos links e a caixa geral do projeto.*/
+}
+
+#profile  { /*seletor para efetuar alterações dentro da caixa da foto*/    
+    
+    text-align: center; /*código para centralizar a foto na caixa profile*/
+    padding: 10px; /*código para colocar um espaço entre a foto e o topo da caixa profile*/
+}
+
+#profile p   { /*seletor para efetuar alterações no paragrafo do profile*/  
+    
+    font-size: 12pt; /*código para colocar tamanho da fonte do profile*/
+    margin-top: 8px; /*código para colocar uma margem de 8px, entre o switch e o  profile*/    
+}
+
+#switch { /*seletor para efetuar alterações no (lua e sol)*/
+    
+    display: flex; /*código para diminuir o tamanho da caixa do switch*/
+    border: 1px solid black; /*código para colocar uma borda com espessura de 1px*/
+    border-radius: 20px; /*código para colocar um raio de borda com 20px*/
+    position: relative; /*código para diminuir o tamanho da caixa do switch*/ 
+    width: 64px;  /*código para diminuir o tamanho da caixa do switch*/ 
+    margin: 4px auto; /*código para colocar um espaço de 4px entre o nome:maykybrito(profile) e o switch(lua e sol)*/
+}
+
+#switch button   { /*código para efetuar auterações no botão switch(lua e sol)*/
+    
+    width: 32px; /*código para colocar largura no botão switch(lua e sol)*/
+    height: 32px; /*código para colocar altura n o botão switch(lua e sol)*/ 
+    background: rgba(187, 206, 206, 0.945)  var(--switch-bg-url) no-repeat center; /*código para colocar a cor branco, a variável, não repetir a imagem e centralizar o botão switch*/
+    border: 0; /*código para colocar bordar zero no botão switch(lua e sol)*/
+    border-radius: 50%; /*código para fazer o botão switch(lua e sol), ficar redondo*/  
+    position: absolute; /*código para fazer o botão switch(lua e sol), ficar dentro do espaço*/
+    top: 50%; /*código para fazer o botão switch(lua e sol), ficar dentro do espaço*/
+    left: 0; 
+    z-index: 1; /*código para fazer o botão switch(lua e sol), ficar visível*/
+    transform: translateY(-50%); /*código para fazer o botão switch(lua e sol), encaixar dentro do espaço*/    
+    animation: slide-back 0.3s; /*código para fazer a animação do botão (lua e sol), suave em 0.4s e manter a animação no final da caixa.*/
+}
+
+.light #switch button   { /*seletor para efetuar alterações no botão sol*/
+    
+     animation: slide-in 0.3s forwards; /*código para fazer a animação do botão (lua e sol), suave em 0.4s e manter a animação no final da caixa.*/
+    
+    /*right: 0; /*código para o botão switch(lua e sol) não iniciar do lado direito*/
+    /*left: initial; /*código para iniciar o botão switch(lua e sol), do lado esquerdo*/
+}
+
+#switch button:hover   {
+
+    outline: 8px solid var(--highlight-color); /*código para colocar uma sombra quando passar o mause em cima do botão(lua e sol).*/
+}
+
+#switch span   { /*código para efetuar alterações na caixa da lua e sol (strock)*/
+    
+    display: block; /*código para flexibilizar a caixa da (lua e sol), stroke.*/    
+    width: 64px; /*código para colocar a largura na caixa do (lua e sol)*/
+    height: 24px; /*código para efetuar altura na caixa da (lua e sol), stroke*/    
+    background: var(--surface-color);
+    border: 1px solid  var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;  
+
+}
+
+ul   { /*seletor para efetuar auterações nas caixas dos links*/    
+    
+    
+    list-style: none; /*código para tirar os pontinhos de uma lista*/
+    display: flex;/*código para permitir dar um espaço ente as caixas dos links*/
+    flex-direction: column; /*código para colocar as caixas dos links em colunas uma embaixo da outra*/
+    gap: 16px; /*código para dar um espaço de 16px, entre as caixas dos links*/  
+    padding: 24px 0; /*código para das um espaço entre o switch e as caixas dos links*/ 
+}
+
+
+
+ul li  a { /*seletor para efetuar auterações nos links de dentro das caixas*/
+    
+    
+    font-family: normal  solid  sans-serif; /*código para colocar: tipo de fonte,negrito,sem serife*/
+    display: flex; /*código para permitir centralizar as caixas e os links*/ 
+    justify-content: center; /*código para centralizar os links dentro das caixas*/ 
+    /*align-items: center; /*código para alinhar os links no meio das caixas*/   
+    padding: 5px; /*para alterar a largura da caixa dos links*/
+    background: rgba(255, 255, 255, 0.089); /*código para colocar cor no fundo das caixas dos links*/
+    border: 1px solid black; /*código para colocar uma bordar de 1px, negrito, preto nas caixas dos links*/
+    border-radius: 8px; /*código para colocar uma raio de 8px, nas bordas das caixas dos links*/
+    font-size: 11pt; /*código para colocar o tamanho das fontes dentro das caixas dos links*/
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none; /*para tirar o sublinhado*/
+    /*text-decoration: line-through; para colocar uma linha no meio da palavra*/
+    /*text-decoration: overline; para colocar uma linha em cima da palavra*/ 
+    /*text-decoration: underline; para colocar uma linha em baixo da palavra*/
+    transition: background 0.5s; /*código para colocar o tempo de passagem do mause de uma caixa para outra dos links*/  
+}
+
+
+
+ul li a:hover   { /*seletor para efetuar alterações nas caixas dos links, quando passar o mause em cima aparece uma bordar de cor branco nas bordas das caixas*/
+  
+    background: rgba(158, 116, 116, 0.123); /*código para quando passar o mause em cima das caixas dos links do (switch sol), mudar de cor*/ 
+    border: 1.5px solid var(--text-color); /*código para colocar uma bordar: 1.5px, negrito, de cor branco, nas caixas dos links do: (switch lua)*/   
+}
+
+#social-links   { /*seletor para efetuar alterações nos botões do social-links*/
+   
+   display: flex;  /*código para permitir alterações nos botões dos social-links*/
+   justify-content: center; /*código para centralizar os botões social-links*/
+   gap: 16px; /*código para das um espaço entre os botões dos social-links*/
+   padding: 5px 0; /*código para dar um espaço entre as caixas dos links e os botões social-links*/ 
+   font-size: 24px; /*código para fazer aumentar os tamanhos dos botões social-links*/
+}
+
+#social-links  a  { /*seletor para efetuar alterações nos botões dos links*/
+   
+    display: flex; /*código para flexibilizar os botões dos links*/
+    align-items: center; /*código para centralizar os botões dos links*/
+    justify-content: center; /*código para centralizar os botões dos links*/
+    padding: 11px; /*código para dar um espaço entre os botões dos links*/
+    border-radius: 50%; /*código para fazer a sombra dos botões dos links ficar redondo*/
+    transition: background 0.3s; /*código para dar uma pausa de 3 segundos para aparecer a sombra dos botões dos links*/
+}
+
+#social-links a:hover   { /*seletor para efetuar alteraçõe nos botões dos links*/
+   
+    background: rgba(158, 116, 116, 0.226); /*código para quando passar o mause em cima dos botões dos links ficar com uma sombra marron redonda.*/      
+}
+
+footer   {  /*código para efetuar alterações no rodapé do projeto.*/
+    
+    font-size: 12px;  /*código para colocar o tamanho da fontes(letras)*/
+    text-align: center; /*código para centralizar o texto do rodapé do projeto*/
+    padding: 10px; /*código para da um espaço entre os social-links e o conteúdo do rodapé*/
+}
+
+footer img   { /*código para efetuar alterações na imagem do rodapé do projeto*/
+ 
+    --text-color: black;  /*código para colocar cor preto na imagem do rodapé do projeto*/     
+}
+
+
+@media (min-width: 700px)  { /*código para modificar a imagem de fundo quando aumentar a tela geral*/
+
+    :root   { /*seletor para efetuar mudanças em toda a tela geral mudanças de cor sol e lua*/
+        
+        --bg-url: url(./imagem/bg-desktop.jpg);       
+    } 
+    
+    .light   { /*seletor para efetuar mudança em toda a tela geral, mudanças de cor sol e lua*/ 
+        
+        --bg-url: url(./imagem/bg-desktop-light.jpg);          
+        
+    } 
+}
+
+@keyframes  slide-in {  /*código para criar animação no botão (lua e sol).*/
+
+      from  {
+        
+        left: 0;
+      } 
+
+      to   {
+
+        left: 50%;
+
+      } 
+}
+
+@keyframes slide-back   {
+    from   {
+        
+        left: 50%;
+    }
+
+    to   {
+
+        left: 0;
+    }
+}
+
+
+
+   
+   
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
