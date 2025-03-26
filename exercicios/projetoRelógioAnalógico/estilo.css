@@ -1,0 +1,194 @@
+*   {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body   {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #081b29;
+  overflow: hidden;  
+}
+
+.wrapper   {
+  position: relative;
+  width: 500px;
+  height: 500px;    
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  animation: colorful 30s linear infinite; 
+} 
+
+@keyframes colorful   {
+  100%   {
+    filter: hue-rotate(360deg);
+  }  
+}
+
+.bar-seconds,
+.number-hours   {
+  position: absolute;  
+  width: 90%;
+  height: 90%;  
+  border-radius: 50%;  
+}
+
+.bar-seconds span   {
+  position: absolute;
+  /* 360deg / 60 = 6deg */
+  transform: rotate(calc(var(--index) * 6deg));
+  inset: -20px;
+  text-align: center;
+}
+
+.bar-seconds span p   {
+  display: inline-block;
+  width: 2px;
+  height: 12px;
+  background: #0ef;
+}
+
+.bar-seconds span:nth-child(5n) p   {
+  background: red;
+  width: 6px; 
+  height: 18px;
+  transform: translateY(1px);
+}
+
+/* 5n = cada multiplo de 5 */
+.number-hours span   {
+  position: absolute;
+  /* 360deg / 12 = 30deg */
+  transform: rotate(calc(var(--index) * 30deg));
+  inset: 6px;
+  text-align: center;
+}
+
+.number-hours span p  {
+  font-size: 40px;
+  color: #0ef;
+  text-shadow: 0 0 10px #0ef;
+  transform: rotate(calc(var(--index) * -30deg));  
+}
+
+.hands-box   {
+  position: relative;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+}
+
+.hands-box .hand   {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+/*código para alterar os dois ponteiros hora/minuto para ficar com a cor azul incandecente*/
+.hands-box .hand i   {
+  display: inline-block;
+  transform-origin: bottom;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0ef;
+}
+
+.hands-box .hours i  {
+  display: inline-block;
+}
+
+.hands-box .minutes i   {
+  display: inline-block;
+}
+
+.hands-box .seconds i   {
+  display: inline-block;
+}
+
+.hands-box .hours   {
+  width: 320px;
+  height: 320px; 
+}  
+
+/*código para alterar o ponteiro de horas*/
+.hands-box .hours i   {
+  width: 8px;
+  /*metade da altura do ponteiro da hora*/
+  height: 160px;
+  background: #0ef;  
+}
+
+/*código para alterar o ponteiro dos minutos*/
+.hands-box .minutes   {
+  width: 506px;
+  height: 390px;   
+}
+
+/*código para efetuar o quadrado dos ponteiros e centralizar*/
+.hands-box .minutes::before   {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);  
+  width: 25px;
+  height: 25px;
+  background: #0ef;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #0ef;
+}
+
+/*código para alterar o ponteiro dos minutos*/
+.hands-box .minutes i   {
+  width: 8px;
+  /*metade da altura do ponteiro dos minutos*/
+  height: 200px;
+  background: #0ef;  
+}
+
+.hands-box .seconds   {
+  width: 526px;
+  height: 526px;  
+}
+
+/*ponto central no topo dos ponteiros*/
+.hands-box .seconds::before   {  
+  content: "";
+  position: absolute;
+  top: 50%;  
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+
+/*código para alterar o ponteiro dos segundos*/
+.hands-box .seconds i   {
+  width: 4px;   
+  /*metade da altura do ponteiro dos segundos*/
+  height: 235px;
+  background: white;
+  transform: rotate(160deg); 
+  margin-right: 130px;
+  margin-top: -150px;
+  box-shadow: none;
+}  
+
+
+
+ 
+
+
+
+
+
+
+
+
+
